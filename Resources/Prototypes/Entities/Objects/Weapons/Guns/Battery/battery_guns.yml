@@ -713,3 +713,39 @@
   - type: Appearance
   - type: StaticPrice
     price: 750
+
+# ERT
+
+- type: entity
+  name: Энергетический карабин киборгов
+  parent: BaseWeaponBattery
+  id: WeaponPulseCarbineBorg
+  description: Энергетический карабин с передовыми технологиями и функцией автоматической перезарядки, предпочитаемый киборгами в оперативном подразделении NT-ERT.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/pulse_carbine.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 3
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 200
+  - type: Battery
+    maxCharge: 5000
+    startingCharge: 5000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 25

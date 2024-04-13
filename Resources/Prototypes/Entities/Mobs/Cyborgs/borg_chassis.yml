@@ -267,6 +267,80 @@
     templateId: borgTall
 
 - type: entity
+  id: BorgChassisERT
+  parent: BaseBorgChassisNT
+  name: Боевой киборг ОБР
+  description: Боевой киборг НТ, разработанный для поддержки ОБР в выполнении боевых задач.
+  components:
+  - type: FlashImmunity
+  - type: ShowSecurityIcons
+  - type: GhostRole
+    makeSentient: true
+    allowMovement: true
+    name: Боевой киборг ОБР
+    description: Накажите злодеев!
+    rules: Подчиняйтесь ОБР и Центральному Командованию.
+  - type: GhostTakeoverAvailable
+  - type: Sprite
+    layers:
+    - state: sec
+    - state: sec_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: sec_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: RandomMetadata
+    nameSegments:
+    - BorgNamesERT
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleERT
+    hasMindState: medical_e
+    noMindState: medical_e_r
+  - type: Construction
+    node: medical
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Security
+    - Binary
+    - Common
+    - CentCom
+  - type: ActiveRadio
+    channels:
+    - Security
+    - Binary
+    - Common
+    - CentCom
+  - type: AccessReader
+    access: [["Security"], ["Command"], ["Research"], ["Lawyer"], ["Engineering"], ["Medical"], ["Salvage"], ["Cargo"], ["Service"], ["Maintenance"], ["Brig"], ["External"], ["Janitor"], ["Atmospherics"]]
+  - type: Inventory
+    templateId: borgDutch
+  - type: Tag
+    tags:
+    - ShoesRequiredStepTriggerImmune
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - EmagImmune
+
+- type: dataset
+  id: BorgNamesERT
+  values:
+  - Ева
+  - Прайм
+  - Джет
+  - Морган
+  - Систэм
+  - Вавилон
+  - Логан
+  - Гэбриэль
+
+- type: entity
   id: BorgChassisSyndicateAssault
   parent: BaseBorgChassisSyndicate
   name: syndicate assault cyborg

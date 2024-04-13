@@ -85,6 +85,15 @@
     - BorgModuleService
 
 - type: entity
+  id: BaseBorgModuleERT
+  parent: BaseBorgModule
+  abstract: true
+  components:
+    - type: Tag
+      tags:
+        - BorgModuleErt
+
+- type: entity
   id: BaseBorgModuleSyndicate
   parent: BaseBorgModule
   abstract: true
@@ -540,6 +549,7 @@
       - EnergySwordDouble
       - PinpointerSyndicateNuclear
 
+
 - type: entity
   id: BorgModuleL6C
   parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule ]
@@ -554,3 +564,48 @@
       items:
       - WeaponLightMachineGunL6C
       - PinpointerSyndicateNuclear
+
+#ert modules
+
+- type: entity
+  id: BorgCombatModuleERT
+  parent: [ BaseBorgModuleERT, BaseProviderBorgModule ]
+  name: Оружейный модуль киборга ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: NT
+    - state: icon-NT
+  - type: ItemBorgModule
+    items:
+    - WeaponPulseCarbineBorg
+    - WeaponPulseCarbineBorg
+    - PinpointerNuclear
+
+- type: entity
+  id: BorgModuleERTNlethal
+  parent: [ BaseBorgModuleERT, BaseProviderBorgModule ]
+  name: Нелетальный модуль киборга ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: NT
+    - state: icon-NT
+  - type: ItemBorgModule
+    items:
+    - Stunbaton
+    - WeaponDisablerSMG
+    - Flash
+
+- type: entity
+  id: BorgToolModuleERT
+  parent: [ BaseBorgModuleERT, BaseProviderBorgModule ]
+  name: Инструментальный модуль киборга ОБР
+  components:
+  - type: Sprite
+    layers:
+    - state: NT
+    - state: icon-NT
+  - type: ItemBorgModule
+    items:
+    - JawsOfLife
