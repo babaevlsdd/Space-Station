@@ -89,9 +89,9 @@
   parent: BaseBorgModule
   abstract: true
   components:
-    - type: Tag
-      tags:
-        - BorgModuleErt
+  - type: Tag
+    tags:
+    - BorgModuleERT
 
 - type: entity
   id: BaseBorgModuleSyndicate
@@ -593,9 +593,9 @@
     - state: icon-NT
   - type: ItemBorgModule
     items:
-    - Stunbaton
-    - WeaponDisablerSMG
-    - Flash
+    - StunbatonBorg
+    - WeaponDisablerSMGBorg
+    - FlashBorg
 
 - type: entity
   id: BorgToolModuleERT

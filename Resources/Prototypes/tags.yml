@@ -184,7 +184,7 @@
   id: BorgModuleSyndicate
 
 - type: Tag
-  id: BorgModuleErt
+  id: BorgModuleERT
 
 - type: Tag
   id: BorgModuleSyndicateAssault

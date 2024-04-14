@@ -55,18 +55,18 @@
 - type: entity
   id: PlayerBorgChassisERTBattery
   parent: BorgChassisERT
-  suffix: Battery, Module
+  suffix: Battery, Tools
   components:
   - type: ContainerFill
     containers:
       borg_brain:
-        - PositronicBrain
+      - PositronicBrain
       borg_module:
-        - BorgCombatModuleERT
-        - BorgModuleERTNlethal
-        - BorgToolModuleERT
+      - BorgCombatModuleERT
+      - BorgModuleERTNlethal
+      - BorgToolModuleERT
   - type: ItemSlots
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
+        startingItem: PowerCellMicroreactor

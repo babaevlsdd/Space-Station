@@ -278,7 +278,7 @@
     makeSentient: true
     allowMovement: true
     name: Боевой киборг ОБР
-    description: Накажите злодеев!
+    description: Слава НТ!
     rules: Подчиняйтесь ОБР и Центральному Командованию.
   - type: GhostTakeoverAvailable
   - type: Sprite
@@ -300,8 +300,8 @@
     moduleWhitelist:
       tags:
       - BorgModuleERT
-    hasMindState: medical_e
-    noMindState: medical_e_r
+    hasMindState: sec_e
+    noMindState: sec_e_r
   - type: Construction
     node: medical
   - type: IntrinsicRadioTransmitter
@@ -323,17 +323,17 @@
   - type: Tag
     tags:
     - ShoesRequiredStepTriggerImmune
+    - FootstepSound
     - DoorBumpOpener
     - CanPilot
-    - FootstepSound
     - EmagImmune
 
 - type: dataset
   id: BorgNamesERT
   values:
   - Ева
-  - Прайм
-  - Джет
+  - Шварц
+  - Адам
   - Морган
   - Систэм
   - Вавилон
