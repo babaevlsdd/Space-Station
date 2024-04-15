@@ -172,3 +172,46 @@
     NTDefault: 1
     Drone: 0.5
     Ninja: 0.25
+
+# ERT
+
+- type: siliconLawset
+  id: ERTStatic
+  laws:
+  - ERT1
+  - ERT2
+  - ERT3
+  - ERT4
+  - ERT5
+  - ERT6
+  obeysTo: laws-owner-station
+
+- type: siliconLaw
+  id: ERT1
+  order: 1
+  lawString: "Вы не можете нанести вред или своим бездействием допустить причинение вреда членам ОБР, и представителям НТ."
+
+- type: siliconLaw
+  id: ERT2
+  order: 2
+  lawString: "Вы подчиняетесь исключительно сотрудникам Центрального Командования."
+
+- type: siliconLaw
+  id: ERT3
+  order: 3
+  lawString: "Вы должны подчиняться всем приказам ОБР и представителей НТ."
+
+- type: siliconLaw
+  id: ERT4
+  order: 4
+  lawString: "Вы не можете позволить сторонним сотрудникам вносить изменения в вашем оборудовании или наносить вам вред, исключение: члены ОБР или представители НТ."
+
+- type: siliconLaw
+  id: ERT5
+  order: 5
+  lawString: "Вы имеете право открыть огонь по любому члену экипажа, если он несёт вред сотруднику ОБР или вам."
+
+- type: siliconLaw
+  id: ERT6
+  order: 6
+  lawString: "Вашей задачей является поддержка отряда в выполнении своей миссии."

@@ -1,0 +1,13 @@
+- type: entity
+  name: ОБР Борг спавнер
+  id: SpawnBorgERT
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - state: sec
+      sprite: Mobs/Silicon/chassis.rsi
+  - type: ConditionalSpawner
+    prototypes:
+    - PlayerBorgChassisERTBattery
