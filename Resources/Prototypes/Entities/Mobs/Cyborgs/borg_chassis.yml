@@ -278,7 +278,7 @@
     makeSentient: true
     allowMovement: true
     name: Боевой киборг ОБР
-    description: Слава НТ!
+    description: Накажите злодеев!
     rules: Подчиняйтесь ОБР и Центральному Командованию.
   - type: GhostTakeoverAvailable
   - type: Sprite
@@ -323,7 +323,6 @@
   - type: Tag
     tags:
     - ShoesRequiredStepTriggerImmune
-    - FootstepSound
     - DoorBumpOpener
     - CanPilot
     - EmagImmune
