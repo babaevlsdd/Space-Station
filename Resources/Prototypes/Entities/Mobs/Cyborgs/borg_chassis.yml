@@ -275,14 +275,14 @@
   - type: FlashImmunity
   - type: ShowSecurityIcons
   - type: GhostRole
+    name: ghost-role-information-ertborg-name
+    description: ghost-role-information-ertborg-description
     requirements:
     - !type:DepartmentTimeRequirement
       department: Security
       time: 18000
     makeSentient: true
     allowMovement: true
-    name: Боевой киборг ОБР
-    description: Накажите злодеев!
     rules: Подчиняйтесь ОБР и Центральному Командованию.
   - type: GhostTakeoverAvailable
   - type: Sprite
@@ -368,7 +368,6 @@
 - type: dataset
   id: BorgNamesERT
   values:
-  - Ева
   - Шварц
   - Адам
   - Морган
