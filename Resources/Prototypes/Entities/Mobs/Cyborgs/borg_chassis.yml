@@ -275,6 +275,10 @@
   - type: FlashImmunity
   - type: ShowSecurityIcons
   - type: GhostRole
+    requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 18000
     makeSentient: true
     allowMovement: true
     name: Боевой киборг ОБР
@@ -350,6 +354,8 @@
     groups:
     - AllAccess
     - CentCom
+  - type: SiliconLawProvider
+    laws: ERTStatic
   - type: Inventory
     templateId: borgDutch
   - type: Tag
