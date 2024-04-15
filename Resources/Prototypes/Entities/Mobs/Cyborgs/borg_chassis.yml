@@ -303,7 +303,7 @@
     hasMindState: sec_e
     noMindState: sec_e_r
   - type: Construction
-    node: medical
+    node: ertcombat
   - type: IntrinsicRadioTransmitter
     channels:
     - Security
@@ -316,8 +316,40 @@
     - Binary
     - Common
     - CentCom
-  - type: AccessReader
-    access: [["Security"], ["Command"], ["Research"], ["Lawyer"], ["Engineering"], ["Medical"], ["Salvage"], ["Cargo"], ["Service"], ["Maintenance"], ["Brig"], ["External"], ["Janitor"], ["Atmospherics"]]
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 175
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Access
+    groups:
+    - AllAccess
+    - CentCom
   - type: Inventory
     templateId: borgDutch
   - type: Tag
@@ -335,9 +367,8 @@
   - Адам
   - Морган
   - Систэм
-  - Вавилон
+  - Смит
   - Логан
-  - Гэбриэль
 
 - type: entity
   id: BorgChassisSyndicateAssault

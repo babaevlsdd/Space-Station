@@ -205,3 +205,6 @@
 
   - node: syndicatesaboteur
     entity: BorgChassisSyndicateSaboteur
+
+  - node: ertcombat
+    entity: BorgChassisERT

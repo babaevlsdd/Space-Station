@@ -36,8 +36,8 @@
     proto: Pulse
     fireCost: 120
   - type: Battery
-    maxCharge: 5000
-    startingCharge: 5000
+    maxCharge: 3300
+    startingCharge: 3300
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 30
